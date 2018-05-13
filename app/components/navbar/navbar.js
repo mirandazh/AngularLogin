@@ -10,7 +10,7 @@ define(['components/login/login', 'components/login/register', 'css!components/n
         return function ($location, $dialog, LoginService) {
             return {
                 restrict:'A',
-                templateUrl:'app/components/navbar/navbar.html',
+                templateUrl:'/components/navbar/navbar.html',
                 replace:true,
                 controller:function ($scope) {
                     var loggedInMenus = [
@@ -43,7 +43,7 @@ define(['components/login/login', 'components/login/register', 'css!components/n
                             backdrop:true,
                             keyboard:true,
                             backdropClick:true,
-                            templateUrl:'app/components/login/login.html',
+                            templateUrl:'/components/login/login.html',
                             controller:LoginController
                         };
                         var dialog = $dialog.dialog(options);
@@ -55,7 +55,7 @@ define(['components/login/login', 'components/login/register', 'css!components/n
                             backdrop:true,
                             keyboard:true,
                             backdropClick:true,
-                            templateUrl:'app/components/login/register.html',
+                            templateUrl:'/components/login/register.html',
                             controller:RegisterController
                         };
                         var dialog = $dialog.dialog(options);

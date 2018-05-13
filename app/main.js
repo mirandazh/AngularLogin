@@ -8,15 +8,15 @@
 require.config({
     map:{
         '*':{
-            'css':'lib/css'
+            'css':'/lib/css.min.js'
         }
     },
     paths:{
-        jquery:'lib/jquery.min',
-        angular:'lib/angular.min',
-        bootstrap:'lib/bootstrap.min'
+        jquery:'/lib/jquery.min',
+        angular:'/lib/angular.min',
+        bootstrap:'/lib/bootstrap.min'
     },
-    baseUrl:'app'
+    baseUrl:'/'
 });
 
 require(['jquery', 'angular', 'bootstrap', 'css!lib/bootstrap.min'], function(){
