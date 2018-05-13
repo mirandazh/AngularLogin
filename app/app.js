@@ -5,8 +5,8 @@
  * Date: 7/04/13
  * Time: 10:38 AM
  */
-define(['components/home/home', 'components/navbar/navbar', 'components/login/loginservice', 'lib/angular.bootstrap.min'],
-    function (HomeController, NavBarDirective, LoginService) {
+define(['components/home/home', 'components/navbar/navbar', 'components/sidenavbar/sidenavbar', 'components/login/loginservice', 'lib/angular.bootstrap.min'],
+    function (HomeController, NavBarDirective, SideNavBarDirective, LoginService) {
 
         return angular.module("login", ['ui.bootstrap'])
                       .config(function ($routeProvider) {
@@ -18,6 +18,7 @@ define(['components/home/home', 'components/navbar/navbar', 'components/login/lo
                               otherwise({redirectTo:'/'});
                       })
                       .directive('fuNavBar', NavBarDirective)
+                      .directive('sideNavBar', SideNavBarDirective)
                       .service('LoginService', LoginService);
     }
 );
